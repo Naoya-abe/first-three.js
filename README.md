@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js R3F 3D Graphics Exercises
+
+このプロジェクトは、Next.jsの**App Router**環境で、**React Three Fiber (@react-three/fiber)** を使ったインタラクティブな3Dグラフィックスを学ぶための演習用リポジトリです。
 
 ## Getting Started
 
-First, run the development server:
+まず、開発サーバーを起動します。
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🚀 演習の開始
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ブラウザで以下のURLを開いてください。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| 演習 | 演習概要 | URL |
+| :--- | :--- | :--- |
+| **演習 1 (五輪)** | [`app/exercise-01/exercise1.md`](app/exercise-01/exercise1.md) | [http://localhost:3000/exercise-01](http://localhost:3000/exercise-01) |
+| **演習 2 (ボール)** | [`app/exercise-02/exercise2.md`](app/exercise-02/exercise2.md) | [http://localhost:3000/exercise-02](http://localhost:3000/exercise-02) |
+| **演習 3 (太陽系)** | [`app/exercise-03/exercise3.md`](app/exercise-03/exercise3.md) | [http://localhost:3000/exercise-03](http://localhost:3000/exercise-03) |
 
-## Learn More
+## プロジェクト構造と技術要素
 
-To learn more about Next.js, take a look at the following resources:
+このプロジェクトは、Next.jsのApp Routerのベストプラクティスに基づき、コンポーネント指向で3Dシーンを構築しています。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📁 フォルダ構成の原則
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| フォルダ | 説明 |
+| :--- | :--- |
+| `app/exercise-XX/` | 各演習のページルート。`page.tsx`がエントリポイントです。 |
+| `app/exercise-XX/_components/` | **演習固有のコンポーネント**（例: `<Ring />`）。ルーティング対象外とするための private folder (`_`) を利用しています。 |
+| `components/canvas/` | アプリ全体で共有する3Dの基本設定（`<Scene />`、`<Box />`など）。 |
 
-## Deploy on Vercel
+### ✨ 使用技術
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **3D Framework**: React Three Fiber (`@react-three/fiber`)
+* **3D Utility**: Drei (`@react-three/drei`) - `OrbitControls`, `Preload` などを利用
+* **Frontend**: Next.js App Router (TypeScript)
+* **Styling**: Tailwind CSS
+* **Code Quality**: ESLint, Prettier
