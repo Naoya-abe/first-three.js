@@ -2,6 +2,8 @@
 
 このプロジェクトは、Next.jsの**App Router**環境で、**React Three Fiber (@react-three/fiber)** を使ったインタラクティブな3Dグラフィックスを学ぶための演習用リポジトリです。
 
+**🚀 デモサイト (Vercel):** [https://first-three-js-orcin.vercel.app/](https://first-three-js-orcin.vercel.app/)
+
 ## Getting Started
 
 まず、開発サーバーを起動します。
@@ -30,7 +32,7 @@ npm run dev
 | :--- | :--- |
 | `app/exercise-XX/` | 各演習のページルート。`page.tsx`がエントリポイントです。 |
 | `app/exercise-XX/_components/` | **演習固有のコンポーネント**（例: `<Ring />`）。ルーティング対象外とするための private folder (`_`) を利用しています。 |
-| `components/canvas/` | アプリ全体で共有する3Dの基本設定（`<Scene />`、`<Box />`など）。 |
+| `components/canvas/` | アプリ全体で共有する3Dの基本設定（`<Scene />`など）。 |
 
 ### ✨ 使用技術
 
