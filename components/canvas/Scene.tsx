@@ -13,7 +13,7 @@ export default function Scene({ children, className }: Props) {
     <div className={className}>
       <Canvas
         // カメラの初期位置設定 (fov: 視野角, position: [x, y, z])
-        camera={{ position: [0, 0, 5], fov: 50 }}
+        camera={{ position: [0, 0, 15], fov: 50 }}
       >
         {/* 照明設定 */}
         <ambientLight intensity={0.5} />
