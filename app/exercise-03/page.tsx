@@ -73,7 +73,15 @@ export default function Exercise3() {
           Prev
         </Link>
 
-        {/* Nextボタンはないため、右側は空欄 */}
+        <Link
+          href="/exercise-04"
+          className="pointer-events-auto flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white backdrop-blur-md px-6 py-3 rounded-full font-bold transition-all border border-white/10"
+        >
+          Next
+          <span className="text-sm opacity-80 group-hover:translate-x-1 transition-transform">
+            →
+          </span>
+        </Link>
       </div>
 
       {/* --- 3Dシーン描画エリア --- */}
