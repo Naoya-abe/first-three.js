@@ -1,20 +1,17 @@
-import Link from 'next/link'
 import Scene from '@/components/canvas/Scene'
 import Sphere from './_components/Sphere'
 import Plane from './_components/Plane'
+import OverlayNavigation from '@/components/ui/OverlayNavigation'
 
 export default function Exercise2() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative bg-neutral-100">
-      {/* --- ナビゲーション (Header) --- */}
-      <div className="absolute top-6 left-6 z-20 flex items-center gap-4">
-        <Link
-          href="/"
-          className="bg-black/5 hover:bg-black/10 text-neutral-800 backdrop-blur-md px-4 py-2 rounded-full text-sm font-medium transition-colors border border-black/5"
-        >
-          ← Home
-        </Link>
-      </div>
+      {/* --- ナビゲーション --- */}
+      <OverlayNavigation
+        prev="/exercise-01"
+        next="/exercise-03"
+        theme="light"
+      />
 
       {/* --- 情報オーバーレイ --- */}
       <div className="absolute top-20 left-6 z-10 max-w-sm pointer-events-none">
@@ -50,27 +47,6 @@ export default function Exercise2() {
             </section>
           </div>
         </div>
-      </div>
-
-      {/* --- ナビゲーション (Footer) --- */}
-      <div className="absolute bottom-6 w-full px-6 flex justify-between z-20 pointer-events-none">
-        <Link
-          href="/exercise-01"
-          className="pointer-events-auto flex items-center gap-2 bg-white/80 hover:bg-white text-neutral-700 backdrop-blur-md px-6 py-3 rounded-full font-bold transition-all border border-neutral-200 shadow-sm"
-        >
-          <span className="text-sm opacity-60">←</span>
-          Prev
-        </Link>
-
-        <Link
-          href="/exercise-03"
-          className="pointer-events-auto flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/30 px-6 py-3 rounded-full font-bold transition-all"
-        >
-          Next
-          <span className="text-sm opacity-80 group-hover:translate-x-1 transition-transform">
-            →
-          </span>
-        </Link>
       </div>
 
       {/* --- 3Dシーン --- */}

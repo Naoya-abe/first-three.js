@@ -1,19 +1,12 @@
-import Link from 'next/link'
 import Scene from '@/components/canvas/Scene'
 import SolarSystem from './_components/SolarSystem'
+import OverlayNavigation from '@/components/ui/OverlayNavigation'
 
 export default function Exercise3() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative bg-neutral-950 text-white">
-      {/* --- ナビゲーション (Header) --- */}
-      <div className="absolute top-6 left-6 z-20 flex items-center gap-4">
-        <Link
-          href="/"
-          className="bg-white/10 hover:bg-white/20 text-white backdrop-blur-md px-4 py-2 rounded-full text-sm font-medium transition-colors border border-white/10"
-        >
-          ← Home
-        </Link>
-      </div>
+      {/* --- ナビゲーション --- */}
+      <OverlayNavigation prev="/exercise-02" next="/exercise-04" theme="dark" />
 
       {/* --- 情報オーバーレイ (UI) --- */}
       <div className="absolute top-20 left-6 z-10 max-w-sm pointer-events-none">
@@ -61,27 +54,6 @@ export default function Exercise3() {
             </section>
           </div>
         </div>
-      </div>
-
-      {/* --- ナビゲーション (Footer) --- */}
-      <div className="absolute bottom-6 w-full px-6 flex justify-between z-20 pointer-events-none">
-        <Link
-          href="/exercise-02"
-          className="pointer-events-auto flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white backdrop-blur-md px-6 py-3 rounded-full font-bold transition-all border border-white/10"
-        >
-          <span className="text-sm opacity-60">←</span>
-          Prev
-        </Link>
-
-        <Link
-          href="/exercise-04"
-          className="pointer-events-auto flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white backdrop-blur-md px-6 py-3 rounded-full font-bold transition-all border border-white/10"
-        >
-          Next
-          <span className="text-sm opacity-80 group-hover:translate-x-1 transition-transform">
-            →
-          </span>
-        </Link>
       </div>
 
       {/* --- 3Dシーン描画エリア --- */}
