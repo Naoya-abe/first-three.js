@@ -3,5 +3,5 @@
 import Sphere from './Sphere'
 
 export default function Sun() {
-  return <Sphere color="orange" radius={1} position={[0, 0, 0]} />
+  return <Sphere color="orange" radius={1} position={[0, 0, 0]} name="Sun" />
 }
