@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Scene from '@/components/canvas/Scene'
 import { Box } from '@/components/canvas/Box'
+import { Route } from 'next'
 
 export default function Home() {
   return (
@@ -60,7 +61,7 @@ function ExerciseLink({
   title,
   description,
 }: {
-  href: string
+  href: Route
   title: string
   description: string
 }) {
