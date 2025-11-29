@@ -2,14 +2,11 @@ import Scene from '@/components/canvas/Scene'
 import Particles from './_components/Particles'
 import OverlayNavigation from '@/components/ui/OverlayNavigation'
 
-// --------------------------------------------------------
-// Page Component: Exercise4 (UIレイアウト)
-// --------------------------------------------------------
 export default function Exercise4() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative bg-neutral-950 text-white">
       {/* --- ナビゲーション --- */}
-      <OverlayNavigation prev="/exercise-03" theme="dark" />
+      <OverlayNavigation prev="/exercise-03" next='/exercise-04' theme="dark" />
       {/* --- 情報オーバーレイ (UI) --- */}
       <div className="absolute top-20 left-6 z-10 max-w-sm pointer-events-none">
         <div className="bg-black/60 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-white/10 text-gray-200">
