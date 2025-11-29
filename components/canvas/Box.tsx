@@ -16,8 +16,7 @@ export function Box(props: any) {
   useFrame((state, delta) => {
     if (meshRef.current) {
       meshRef.current.rotation.x += 1 * delta
-    //   // 少し複雑な回転を加えてみる
-    //   meshRef.current.rotation.y += delta * 0.5
+      meshRef.current.rotation.y += delta * 0.5
     }
   })
 
@@ -30,7 +29,6 @@ export function Box(props: any) {
       onPointerOver={() => setHover(true)}
       onPointerOut={() => setHover(false)}
     >
-      {/* 将来ここを pointCloud (点群) に置き換えます */}
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
     </mesh>
